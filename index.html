@@ -34,21 +34,22 @@
       <div class="main">
         <!-- header -->
         <header>
-				<div class="ban"><div><ul id="top_nav">
-              <li><a href="index.html"><img src="images/icon_1.gif" alt=""></a></li>
-              <li><a href="#"><img src="images/icon_2.gif" alt=""></a></li>
-              <li class="end"><a href="kontakt.html"><img src="images/icon_3.gif" alt=""></a></li></ul>
-			        	</div></div>
-			<nav>
-		      <ul id="menu">
-			  <li class="active"><a href="index.html">Home</a></li>
-              <li><a href="ayurveda.html">Ayurveda</a></li>
-              <li><a href="galarie.html">Galarie</a></li>
-              <li><a href="gewuerze.html">Gewürze</a></li>
-              <li><a href="mittagstisch.html">Mittagstisch</a></li>
-			  <li><a href="speisekarte.html">Speisekarte</a></li>
-			  <li><a href="tisch.html">Tisch Reservierung</a></li>
-			   </ul>
+				  <div class="ban">
+           <div></div>
+          
+
+
+            </div>
+			     <nav>
+		        <ul id="menu">
+			       <li class="active"><a href="index.html">Home</a></li>
+             <li><a href="ayurveda.html">Ayurveda</a></li>
+             <li><a href="galarie.html">Galarie</a></li>
+             <li><a href="gewuerze.html">Gewürze</a></li>
+             <li><a href="mittagstisch.html">Mittagstisch</a></li>
+			       <li><a href="speisekarte.html">Speisekarte</a></li>
+			       <li><a href="kontakt.html">Kontakt</a></li>
+			      </ul>
           </nav>
         </header>
         <!-- / header -->
@@ -90,7 +91,7 @@
                   <a href="#" class="button1">Read More</a> </div>
               </div>
             </section>
-            <section class="cols pad_left1">
+            <section class="cols pad_lft1">
               <div class="box">
                 <div>
                   <h2>About <span>Us!!!</span></h2>
@@ -99,7 +100,7 @@
                   <a href="#" class="button1">Read More</a> </div>
               </div>
             </section>
-            <section class="cols pad_left1">
+            <section class="cols pad_lft1">
               <div class="box">
                 <div>
                   <h2>Speise <span>Karte!!!</span></h2>
@@ -165,5 +166,24 @@
           </div>
         </section>
          </div>
+          <script>Cufon.now();</script>
+      <script type="text/javascript" language="javascript">
+
+      $(document).ready(function()
+      {
+        $('.blink').blink(); // default is 500ms blink interval.
+        //$('.blink').blink({delay:100}); // causes a 100ms blink interval.
+      });
+
+      </script>
+      <script type="text/javascript">  
+ $(".datum").datepicker( mindate: moment());
+
+$(".date-picker").on("change", function () {
+    var id = $(this).attr("id");
+    var val = $("label[for='" + id + "']").text();
+    $("#msg").text(val + " changed");
+});
+ </script>
 		 </body>
 </html>

@@ -7,38 +7,37 @@
 			height: 152px;
 			width: 960px; }
 			
-		 ul {         
-          padding:0 0 0 0;
-          margin:0 0 0 0;
-      }
-      ul li {     
-          list-style:none;
-          margin-bottom:25px;           
-      }
-      ul li img {
-          cursor: pointer;
-      }
-      .modal-body {
-			color: black;
-          padding:5px !important;
-      }
-      .modal-content {
-          border-radius:0;
-		  color: black
-      }
-      .modal-dialog img {
-         text-align:center;
-         margin:0 auto;
-      }
-    .next {
-        float:right;
-        text-align:right;
-    }
-      @media screen and (max-width:1500px){
-          #ads {
-              display:none;
-          }
-		  
+		ul {         
+    padding:0 0 0 0;
+    margin:0 0 0 0;
+  }
+  ul li {     
+    list-style:none;
+    margin-bottom:25px;           
+  }
+  ul li img {
+    cursor: pointer;
+  }
+  .modal-body {
+   color: black;
+   padding:5px !important;
+ }
+ .modal-content {
+  border-radius:0;
+  color: black
+}
+.modal-dialog img {
+ text-align:center;
+ margin:0 auto;
+}
+.next {
+  float:right;
+  text-align:right;
+}
+@media screen and (max-width:1500px){
+  #ads {
+    display:none;
+  }
 </style>
 <title>Indian Curry House | Ayurveda</title>
 <meta charset="utf-8">
@@ -50,15 +49,17 @@
 <script src="js/cufon-replace.js"></script>
 <script src="js/Forum_400.font.js"></script>
 <script src="js/atooltip.jquery.js"></script>
-
 <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+   <link rel="stylesheet" href="css/bootstrap.css">
 
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+   <!-- jQuery library -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 
-<!-- Latest compiled JavaScript -->
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+   <!-- Latest compiled JavaScript -->
+   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+   <script src="js/jquery-1.3.2.min.js" language="javascript" type="text/javascript"></script>
+   <script src="js/jquery-blink.js" language="javscript" type="text/javascript"></script>
 
 <!--[if lt IE 9]>
 <script src="js/html5.js"></script>
@@ -71,11 +72,103 @@
     <div class="main">
       <!-- header -->
       <header>
-       <div class="ban"><div><ul id="top_nav">
-              <li><a href="index.html"><img src="images/icon_1.gif" alt=""></a></li>
-              <li><a href="#"><img src="images/icon_2.gif" alt=""></a></li>
-              <li class="end"><a href="contacts.html"><img src="images/icon_3.gif" alt=""></a></li></ul>
-			        	</div></div>
+       <div class="ban">
+<div class="row"  style="float: right" id="top_nav">
+              <a class="text"  data-toggle="modal" href="#myModal" style="color:yellow; font-style: italic; font-size: 20px;">Online Reservieren !!!</a>
+              <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">   
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">×</button>
+                      <h3 class="modal-title" style="color:blue;">Reservierung machen</h3>
+                    </div>
+                    <div class="modal-body">
+                      <form class="form-horizontal" role="form">
+                        <div class="form-group">
+                          <label class="control-label col-sm-3" for="anrede">Anrede:</label>
+                          <div class="col-sm-9">
+                            <div class="dropdown">
+                              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                - bitte wählen -
+                                <span class="caret"></span>
+                              </button>
+                              <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                <li><a href="#">Herr</a></li>
+                                <li><a href="#">Frau</a></li>
+                              </ul>
+                            </div>
+
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="control-label col-sm-3" for="nachname">Nachname:*</label>
+                          <div class="col-sm-9">
+                            <input type="text" class="form-control" id="nachname" placeholder="Nachename">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="control-label col-sm-3" for="vorname">Vorname:*</label>
+                          <div class="col-sm-9">
+                            <input type="text" class="form-control" id="vorname" placeholder="Vorname">
+                          </div>  
+                        </div>
+                        <div class="form-group">
+                          <label class="control-label col-sm-3" for="email">Email:*</label>
+                          <div class="col-sm-9">
+                            <input type="text" class="form-control" id="email" placeholder="Email">
+                          </div>
+                        </div>
+						 <div class="form-group">
+                          <label class="control-label col-sm-3" for="telefonnummer">Anzahl der Personnen:*</label>
+                          <div class="col-sm-9">          
+                            <input type="text" class="form-control" id="telefonnummer" placeholder="">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="control-label col-sm-3" for="telefonnummer">Telefonnummer:*</label>
+                          <div class="col-sm-9">          
+                            <input type="text" class="form-control" id="telefonnummer" placeholder="">
+                          </div>
+                        </div>
+
+                        <div class="form-group">
+                          <label class="control-label col-sm-3" for="datum">Datum:*</label>
+                          <div class="col-sm-9">          
+                            <div class="input-group">
+                              <input type="text" class="form-control date-picker" id="datum" readonly="readonly">
+                              <label for="datum" class="input-group-addon btn">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <div class="form-group">
+                          <label class="control-label col-sm-3" for="uhrzeit von">Uhrzeit von:*</label>
+                          <div class="col-sm-9">          
+                            <input type="text" class="form-control" id="uhrzeit von" placeholder="">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="control-label col-sm-3" for="uhrzeit bis">Uhrzeit bis:*</label>
+                          <div class="col-sm-9">          
+                            <input type="text" class="form-control" id="uhrzeit bis" placeholder="">
+                          </div>
+                        </div>
+                        <div class="form-group">        
+                          <div class="col-sm-offset-2 col-sm-10" >
+                            <button type="submit" class="btn btn-default" style="float: right;">Absenden</button>
+                            <button type="submit" class="btn btn-default" style="float: right;">Abrechen</button>
+                          </div>
+                        </div>
+
+                      </form>  
+                    </div><!-- /.modal-body -->
+                  </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+              </div><!-- /.modal -->
+            </div><!-- row -->
+       </div>
           <nav>
 		  
             <ul id="menu">
@@ -92,142 +185,142 @@
       <!-- / header -->
       <!-- content -->
       <article id="content">
-        <div class="wrap">
-          <section class="col1 pad_left1">
-            <div class="box">
-        <div class="row">				
-<h3></h3>
-    <div class="col-lg-12">
-      
-		<div class="col-lg-3 col-sm-4 col-xs-6">
-			<a class="controls"  style="text-align: center" href="#" data-image-id="" data-toggle="modal" data-title="ANIS" data-description="Anis ist eine einjährige, bis 50 cm hoch wachsende Pflanze mit variabel aussehenden Blättern. Der Geschmack von Anis ist sehr aromatisch und süßlich.<br><br><i><b>Es wirkt gegen</b></i>: Blähungen, Magen-Darm-Beschwerden, Husten, wirkt schleimlösend und Verdauungsfördernd" data-image="images/gewuerze/anis.jpg" data-target="#image-gallery">
-				<img class="thumbnail img-responsive" src="images/gewuerze/anis.jpg">
-			</a>
-		</div>
-     
-	 <div class="col-lg-3 col-sm-4 col-xs-6">
-	 <a class="controls" href="#" data-image-id="" data-toggle="modal" data-title="BOCKSHORNKLEE" data-description="Bockshornklee ist ein einjähriges, bis zu 60 cm hohes Kraut. Die Blätter sind gestielt und dreizählig gefiedert. In den Blattachseln sitzen unscheinbare Blüten, welche oben blassgelb und am Grunde hellviolett sind. Bockshornsamen verbreiten einen kräftigen, aromatischen Geruch. Die Samen schmecken schwach bitter, beim Zerkauen fühlen sie sich im Mund schleimig an.<br><br><i><b>Es wirkt gegen</b></i>: Geschwüre, Haarausfall, Stoffwechselstörungen und wirkt appetitanregend" data-image="images/gewuerze/bockshornklee.jpg" data-target="#image-gallery">
-			<img class="thumbnail img-responsive" src="images/gewuerze/bockshornklee.jpg">
-			</a>
-		</div>
-		
-      <div class="col-lg-3 col-sm-4 col-xs-6">
-	  <a class="controls" href="#" data-image-id="" data-toggle="modal" data-image="images/gewuerze/chilli.jpg" data-target="#image-gallery" data-title="Chilli" data-description= "Chilis gehören zur Familie der Paprika und sind meistens einjährig. An den Verzweigungen der Pflanze wachsen hängende, unscheinbare Blüten, aus denen sich die Chili-Früchte entwickeln, die meistens zuerst grün und dann rot werden.<br><br><i><b>Es wirkt bei</b></i>: Fettverbrennung, hebt die Stimmung, stärkt das Immunsystem und wirkt krebshemmend">
-	  <img class="thumbnail img-responsive" src="images/gewuerze/chilli.jpg">
-			</a>
-		</div>
-		
-      <div class="col-lg-3 col-sm-4 col-xs-6">
-	  <a class="controls" href="#" data-image-id="" data-toggle="modal" data-image="images/gewuerze/chilli.jpg" data-target="#image-gallery" data-title="FENCHELSAMEN" data-description="Der Fenchel ist eine zweijährige Pflanze. Aus dem Wurzelstock wächst ein bis zu zwei Meter hoher glatter Stengel, der bläulich und gestreift ist. Die bläulichen Blätter sind sehr dünn, wie Fäden, und gefiedert.<br><br><i><b>Es wirkt</b></i>: antibakteriell, krampflösend, schleimlösend, antiseptisch"><img class="thumbnail img-responsive" src="images/gewuerze/fenchelsamen.jpg"></a></div>
-	  
-      <div class="col-lg-3 col-sm-4 col-xs-6"><a class="controls" href="#" data-image-id="" data-toggle="modal" data-image="images/gewuerze/ingwer.jpg" data-target="#image-gallery"data-title="INGWER" data-description="Ingwer ist eine tropische Pflanze, die etwa 1 m hoch wird und deren Triebe sich aus einem verzweigten Wurzelstock (Rhizom) entwickeln. Die Blätter werden teilweise bis über 20 cm lang und sind von lanzettlicher Form. Die Pflanze trägt relativ unscheinbare, gelbe Blüten, die in einem dichten, zapfenartigen Blütenstand stehen Der Geschmack von Ingwer ist, insbesondere in frischem Zustand, sehr würzig und brennend scharf.<br>Es wirkt: hemmend bei Blutgerinnung, Reisekrankheit, Brechreiz, Übelkeit, Durchblutungsfördernd und lockert verkrampfte Muskeln"><img class="thumbnail img-responsive" src="images/gewuerze/ingwer.jpg"></a></div>
-	  
-      <div class="col-lg-3 col-sm-4 col-xs-6"><a class="controls" href="#" data-image-id="" data-toggle="modal" data-image="images/gewuerze/kardamomkapseln.jpg" data-target="#image-gallery" data-title="KARDAMOMKAPSELN" data-description="Kardamom ist eine ausdauernde krautige Pflanze und erreicht in der Regel Wuchshöhen von 2 bis 3 Meter, vereinzelt bis 5,5 Meter. Es wird ein starkes bewurzeltes Rhizom als Überdauerungsorgan gebildet. Es sind viele lanzettliche Laubblätter vorhanden.<br><br><i><b>Es wirkt gegen</b></i>: Asthma, Blähungen, Menstruationsbeschwerden und stärkt das Nervensystem"><img class="thumbnail img-responsive" src="images/gewuerze/kardamomkapseln.jpg"></a></div>
-      
-	  <div class="col-lg-3 col-sm-4 col-xs-6"><a class="controls" href="#" data-image-id="" data-toggle="modal" data-image="images/gewuerze/koriandersamen.jpg" data-target="#image-gallery" data-title="KORIANDERSAMEN" data-description="Koriander ist eine etwa 60 cm hohe, unangenehm riechende, 1-jährige Pflanze, die gekerbte Blätter trägt. Die Blüten sind weiß bis blassrosa, 5-zählig und in Doppeldolden angeordnet. Der Geruch wie auch der Geschmack von Koriander sind aromatisch und würzig.<br><br><i><b>Es wirkt gegen</b></i>: Rheuma und Gelenkschmerzen, Würmer und bei Völlegefühl"><img class="thumbnail img-responsive" src="images/gewuerze/koriandersamen.jpg"></a></div>
-	  
-      <div class="col-lg-3 col-sm-4 col-xs-6"><a class="controls" href="#" data-image-id="" data-toggle="modal" data-image="images/gewuerze/kuemmel.jpg" data-target="#image-gallery" data-title="KUEMMEL" data-description="Königskümmel (Ajowan) ist eine einjährige krautige Pflanze, die Wuchshöhen von bis zu 50 Zentimetern erreicht. Sie besitzt fein fiederteilige Laubblätter. Die weißen Blüten sind und erscheinen in den familientypischen doppeldoldigen Blütenständen.<br><br><i><b>Es wirkt gegen</b></i>: Husten, Erkältung, Verdauung, Fieber, Bauchschmerzen"><img class="thumbnail img-responsive" src="images/gewuerze/kuemmel.jpg"></a></div>
-	  
-      <div class="col-lg-3 col-sm-4 col-xs-6"><a class="controls" href="#" data-image-id="" data-toggle="modal" data-image="images/gewuerze/kurkuma.jpg" data-target="#image-gallery" data-title="KURKUMA" data-description="Kurkuma ist eine mehrjährige, tropische Staude, die dem Ingwer sehr ähnelt. Sie besitzt grundständige, sehr große und breite Blätter ohne Behaarung und mit annähernd parallel verlaufenden Blattnerven. Die relativ großen gelben Blüten mit drei Blütenblättern stehen in länglichen Ähren. Geschmacklich ist die Wurzel bitter und brennend scharf.<br>Es wirkt: stark entzündungshemmend, antioxidantiv, enthält viel Vitamin B6 und wirkt krebshemmend"><img class="thumbnail img-responsive" src="images/gewuerze/kurkuma.jpg"></a></div>
-	  
-      <div class="col-lg-3 col-sm-4 col-xs-6"><a class="controls" href="#" data-image-id="" data-toggle="modal" data-image="images/gewuerze/muskatnuss.jpg" data-target="#image-gallery" data-title="MUSKATNUSS" data-description="Der Muskatnussbaum ist ein immergrüner Baum, der eine Wuchshöhe von 5 bis 18 Meter erreicht. Der Kern des Samens, wie auch der Samenmantel, wird sowohl als Gewürz wie auch als Droge verwendet. In der Umgangssprache bezeichnet man den Samen als Muskatnuss oder Muskat und den Samenmantel als Muskatblüte<br><br><i><b>Es wirkt gegen</b></i>: Nervosität, Schlaflosigkeit, Magenbeschwerden, Felchten und Ekzemen"><img class="thumbnail img-responsive" src="images/gewuerze/muskatnuss.jpg"></a></div>
-      
-	  <div class="col-lg-3 col-sm-4 col-xs-6"><a class="controls" href="#" data-image-id="" data-toggle="modal" data-image="images/gewuerze/nelken.jpg" data-target="#image-gallery" data-title="NELKEN" data-description="Der Nelkenbaum ist ein immergrüner Baum, der bis zu 20 Meter hoch werden kann. Er hat spitze, eiförmige bis zu 15 cm lange ledrige Blätter. Alle Teile des Nelkenbaums riechen stark würzig.<br><br><i><b>Es wirkt gegen</b></i>: Zahnschmerzen, Verdauungschwierigkeiten, Appetitlosigkeit und Mundgeruch"><img class="thumbnail img-responsive" src="images/gewuerze/nelken.jpg"></a></div>
-	  
-	  <div class="col-lg-3 col-sm-4 col-xs-6"><a class="controls" href="#" data-image-id="" data-toggle="modal" data-image="images/gewuerze/safran.jpg" data-target="#image-gallery" data-title="SAFRAN" data-description="Die Safran-Pflanze stammt aus der Familie der Schwertliliengewächse und ist eine mehrjährige Krokusart. Die Safranknolle treibt erst im Herbst und überdauert den Rest des Jahres im Boden. Aus dem Stempel der Blüten wird das Gewürz Safran gewonnen, das bitte-herb-scharf schmeckt und intensiv Gelb färbt.<br><br><i><b>Es wirkt gegen</b></i>: Krämpfe, Husten, Schlaflosigkeit und nervenstärkend"><img class="thumbnail img-responsive" src="images/gewuerze/safran.jpg"></a></div>
-
-	</div>
-
-
-
-<div class="modal fade" id="image-gallery" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="image-gallery-title"></h4>
-            </div>
-            <div class="modal-body">
-                <img id="image-gallery-image" class="img-responsive" src="">
-				<div  id="image-gallery-description">
-                    This text will be overwritten by jQuery
-                </div>
-            </div>
-            <div class="modal-footer">
-
-                <div class="col-md-2">
-                    <button type="button" class="btn btn-primary pull-left" id="show-previous-image">&laquo; previous</button>
-                </div>
-
-                <div class="col-md-8 text-justify">
-                   
-                </div>
-
-                <div class="col-md-2">
-                    <button type="button" id="show-next-image" class="btn btn-primary">next &raquo;</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-            
-			
-                  
-    
-   
-			</div>
-          </section>
-          
-        </div>
-      </article>
-    </div>
+  <div class="wrap">
+  <section class="col1 pad_left1">
+  <div class="box">
+  <div class="row">				
+  <h3></h3>
+  <div class="col-lg-12">
+  
+  <div class="col-lg-3 col-sm-4 col-xs-6">
+  <a class="controls"  style="text-align: center" href="#" data-image-id="" data-toggle="modal" data-title="ANIS" data-description="Anis ist eine einjährige, bis 50 cm hoch wachsende Pflanze mit variabel aussehenden Blättern. Der Geschmack von Anis ist sehr aromatisch und süßlich.<br><br><i><b>Es wirkt gegen</b></i>: Blähungen, Magen-Darm-Beschwerden, Husten, wirkt schleimlösend und Verdauungsfördernd" data-image="images/gewuerze/anis.jpg" data-target="#image-gallery">
+  <img class="thumbnail img-responsive" src="images/gewuerze/anis.jpg">
+  </a>
   </div>
-</div>
+  
+  <div class="col-lg-3 col-sm-4 col-xs-6">
+  <a class="controls" href="#" data-image-id="" data-toggle="modal" data-title="BOCKSHORNKLEE" data-description="Bockshornklee ist ein einjähriges, bis zu 60 cm hohes Kraut. Die Blätter sind gestielt und dreizählig gefiedert. In den Blattachseln sitzen unscheinbare Blüten, welche oben blassgelb und am Grunde hellviolett sind. Bockshornsamen verbreiten einen kräftigen, aromatischen Geruch. Die Samen schmecken schwach bitter, beim Zerkauen fühlen sie sich im Mund schleimig an.<br><br><i><b>Es wirkt gegen</b></i>: Geschwüre, Haarausfall, Stoffwechselstörungen und wirkt appetitanregend" data-image="images/gewuerze/bockshornklee.jpg" data-target="#image-gallery">
+  <img class="thumbnail img-responsive" src="images/gewuerze/bockshornklee.jpg">
+  </a>
+  </div>
+  
+  <div class="col-lg-3 col-sm-4 col-xs-6">
+  <a class="controls" href="#" data-image-id="" data-toggle="modal" data-image="images/gewuerze/chilli.jpg" data-target="#image-gallery" data-title="Chilli" data-description= "Chilis gehören zur Familie der Paprika und sind meistens einjährig. An den Verzweigungen der Pflanze wachsen hängende, unscheinbare Blüten, aus denen sich die Chili-Früchte entwickeln, die meistens zuerst grün und dann rot werden.<br><br><i><b>Es wirkt bei</b></i>: Fettverbrennung, hebt die Stimmung, stärkt das Immunsystem und wirkt krebshemmend">
+  <img class="thumbnail img-responsive" src="images/gewuerze/chilli.jpg">
+  </a>
+  </div>
+  
+  <div class="col-lg-3 col-sm-4 col-xs-6">
+  <a class="controls" href="#" data-image-id="" data-toggle="modal" data-image="images/gewuerze/chilli.jpg" data-target="#image-gallery" data-title="FENCHELSAMEN" data-description="Der Fenchel ist eine zweijährige Pflanze. Aus dem Wurzelstock wächst ein bis zu zwei Meter hoher glatter Stengel, der bläulich und gestreift ist. Die bläulichen Blätter sind sehr dünn, wie Fäden, und gefiedert.<br><br><i><b>Es wirkt</b></i>: antibakteriell, krampflösend, schleimlösend, antiseptisch"><img class="thumbnail img-responsive" src="images/gewuerze/fenchelsamen.jpg"></a></div>
+  
+  <div class="col-lg-3 col-sm-4 col-xs-6"><a class="controls" href="#" data-image-id="" data-toggle="modal" data-image="images/gewuerze/ingwer.jpg" data-target="#image-gallery"data-title="INGWER" data-description="Ingwer ist eine tropische Pflanze, die etwa 1 m hoch wird und deren Triebe sich aus einem verzweigten Wurzelstock (Rhizom) entwickeln. Die Blätter werden teilweise bis über 20 cm lang und sind von lanzettlicher Form. Die Pflanze trägt relativ unscheinbare, gelbe Blüten, die in einem dichten, zapfenartigen Blütenstand stehen Der Geschmack von Ingwer ist, insbesondere in frischem Zustand, sehr würzig und brennend scharf.<br>Es wirkt: hemmend bei Blutgerinnung, Reisekrankheit, Brechreiz, Übelkeit, Durchblutungsfördernd und lockert verkrampfte Muskeln"><img class="thumbnail img-responsive" src="images/gewuerze/ingwer.jpg"></a></div>
+  
+  <div class="col-lg-3 col-sm-4 col-xs-6"><a class="controls" href="#" data-image-id="" data-toggle="modal" data-image="images/gewuerze/kardamomkapseln.jpg" data-target="#image-gallery" data-title="KARDAMOMKAPSELN" data-description="Kardamom ist eine ausdauernde krautige Pflanze und erreicht in der Regel Wuchshöhen von 2 bis 3 Meter, vereinzelt bis 5,5 Meter. Es wird ein starkes bewurzeltes Rhizom als Überdauerungsorgan gebildet. Es sind viele lanzettliche Laubblätter vorhanden.<br><br><i><b>Es wirkt gegen</b></i>: Asthma, Blähungen, Menstruationsbeschwerden und stärkt das Nervensystem"><img class="thumbnail img-responsive" src="images/gewuerze/kardamomkapseln.jpg"></a></div>
+  
+  <div class="col-lg-3 col-sm-4 col-xs-6"><a class="controls" href="#" data-image-id="" data-toggle="modal" data-image="images/gewuerze/koriandersamen.jpg" data-target="#image-gallery" data-title="KORIANDERSAMEN" data-description="Koriander ist eine etwa 60 cm hohe, unangenehm riechende, 1-jährige Pflanze, die gekerbte Blätter trägt. Die Blüten sind weiß bis blassrosa, 5-zählig und in Doppeldolden angeordnet. Der Geruch wie auch der Geschmack von Koriander sind aromatisch und würzig.<br><br><i><b>Es wirkt gegen</b></i>: Rheuma und Gelenkschmerzen, Würmer und bei Völlegefühl"><img class="thumbnail img-responsive" src="images/gewuerze/koriandersamen.jpg"></a></div>
+  
+  <div class="col-lg-3 col-sm-4 col-xs-6"><a class="controls" href="#" data-image-id="" data-toggle="modal" data-image="images/gewuerze/kuemmel.jpg" data-target="#image-gallery" data-title="KUEMMEL" data-description="Königskümmel (Ajowan) ist eine einjährige krautige Pflanze, die Wuchshöhen von bis zu 50 Zentimetern erreicht. Sie besitzt fein fiederteilige Laubblätter. Die weißen Blüten sind und erscheinen in den familientypischen doppeldoldigen Blütenständen.<br><br><i><b>Es wirkt gegen</b></i>: Husten, Erkältung, Verdauung, Fieber, Bauchschmerzen"><img class="thumbnail img-responsive" src="images/gewuerze/kuemmel.jpg"></a></div>
+  
+  <div class="col-lg-3 col-sm-4 col-xs-6"><a class="controls" href="#" data-image-id="" data-toggle="modal" data-image="images/gewuerze/kurkuma.jpg" data-target="#image-gallery" data-title="KURKUMA" data-description="Kurkuma ist eine mehrjährige, tropische Staude, die dem Ingwer sehr ähnelt. Sie besitzt grundständige, sehr große und breite Blätter ohne Behaarung und mit annähernd parallel verlaufenden Blattnerven. Die relativ großen gelben Blüten mit drei Blütenblättern stehen in länglichen Ähren. Geschmacklich ist die Wurzel bitter und brennend scharf.<br>Es wirkt: stark entzündungshemmend, antioxidantiv, enthält viel Vitamin B6 und wirkt krebshemmend"><img class="thumbnail img-responsive" src="images/gewuerze/kurkuma.jpg"></a></div>
+  
+  <div class="col-lg-3 col-sm-4 col-xs-6"><a class="controls" href="#" data-image-id="" data-toggle="modal" data-image="images/gewuerze/muskatnuss.jpg" data-target="#image-gallery" data-title="MUSKATNUSS" data-description="Der Muskatnussbaum ist ein immergrüner Baum, der eine Wuchshöhe von 5 bis 18 Meter erreicht. Der Kern des Samens, wie auch der Samenmantel, wird sowohl als Gewürz wie auch als Droge verwendet. In der Umgangssprache bezeichnet man den Samen als Muskatnuss oder Muskat und den Samenmantel als Muskatblüte<br><br><i><b>Es wirkt gegen</b></i>: Nervosität, Schlaflosigkeit, Magenbeschwerden, Felchten und Ekzemen"><img class="thumbnail img-responsive" src="images/gewuerze/muskatnuss.jpg"></a></div>
+  
+  <div class="col-lg-3 col-sm-4 col-xs-6"><a class="controls" href="#" data-image-id="" data-toggle="modal" data-image="images/gewuerze/nelken.jpg" data-target="#image-gallery" data-title="NELKEN" data-description="Der Nelkenbaum ist ein immergrüner Baum, der bis zu 20 Meter hoch werden kann. Er hat spitze, eiförmige bis zu 15 cm lange ledrige Blätter. Alle Teile des Nelkenbaums riechen stark würzig.<br><br><i><b>Es wirkt gegen</b></i>: Zahnschmerzen, Verdauungschwierigkeiten, Appetitlosigkeit und Mundgeruch"><img class="thumbnail img-responsive" src="images/gewuerze/nelken.jpg"></a></div>
+  
+  <div class="col-lg-3 col-sm-4 col-xs-6"><a class="controls" href="#" data-image-id="" data-toggle="modal" data-image="images/gewuerze/safran.jpg" data-target="#image-gallery" data-title="SAFRAN" data-description="Die Safran-Pflanze stammt aus der Familie der Schwertliliengewächse und ist eine mehrjährige Krokusart. Die Safranknolle treibt erst im Herbst und überdauert den Rest des Jahres im Boden. Aus dem Stempel der Blüten wird das Gewürz Safran gewonnen, das bitte-herb-scharf schmeckt und intensiv Gelb färbt.<br><br><i><b>Es wirkt gegen</b></i>: Krämpfe, Husten, Schlaflosigkeit und nervenstärkend"><img class="thumbnail img-responsive" src="images/gewuerze/safran.jpg"></a></div>
 
-<div class="body3">
+  </div>
+
+
+
+  <div class="modal fade" id="image-gallery" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+  <div class="modal-content">
+  <div class="modal-header">
+  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+  <h4 class="modal-title" id="image-gallery-title"></h4>
+  </div>
+  <div class="modal-body">
+  <img id="image-gallery-image" class="img-responsive" src="">
+  <div  id="image-gallery-description">
+  This text will be overwritten by jQuery
+  </div>
+  </div>
+  <div class="modal-footer">
+
+  <div class="col-md-2">
+  <button type="button" class="btn btn-primary pull-left" id="show-previous-image">&laquo; previous</button>
+  </div>
+
+  <div class="col-md-8 text-justify">
+  
+  </div>
+
+  <div class="col-md-2">
+  <button type="button" id="show-next-image" class="btn btn-primary">next &raquo;</button>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  
+  
+  
+  
+  
+  </div>
+  </section>
+  
+  </div>
+  </article>
+  </div>
+  </div>
+  </div>
+
+  <div class="body3">
   <div class="body4">
-    <div class="main">
-      <!-- footer -->
-      <footer>
-        <div class="wrapper">
-          <section class="col1 pad_left1">
-            <h3>Toll Free: <span>1-800 123 45 67</span></h3>
-            Copyright &copy; <a href="#">Domain Name</a> All Rights Reserved<br>
-            Design by <a target="_blank" href="http://www.templatemonster.com/">TemplateMonster.com</a></section>
-          <section class="col2 pad_left1">
-            <h3>Follow Us </h3>
-            <ul id="icons">
-              <li><a href="#" class="normaltip"><img src="images/icon1.gif" alt=""></a></li>
-              <li><a href="#" class="normaltip"><img src="images/icon2.gif" alt=""></a></li>
-              <li><a href="#" class="normaltip"><img src="images/icon3.gif" alt=""></a></li>
-              <li><a href="#" class="normaltip"><img src="images/icon4.gif" alt=""></a></li>
-              <li><a href="#" class="normaltip"><img src="images/icon5.gif" alt=""></a></li>
-            </ul>
-          </section>
-        </div>
-        <!-- {%FOOTER_LINK} -->
-      </footer>
-      <!-- / footer -->
-    </div>
+  <div class="main">
+    <!-- footer -->
+  <footer>
+  <div class="wrapper">
+  <section class="col1 pad_left1">
+  <h3>Toll Free: <span>1-800 123 45 67</span></h3>
+  Copyright &copy; <a href="#">Domain Name</a> All Rights Reserved<br>
+  Design by <a target="_blank" href="http://www.templatemonster.com/">TemplateMonster.com</a></section>
+  <section class="col2 pad_left1">
+  <h3>Follow Us </h3>
+  <ul id="icons">
+  <li><a href="#" class="normaltip"><img src="images/icon1.gif" alt=""></a></li>
+  <li><a href="#" class="normaltip"><img src="images/icon2.gif" alt=""></a></li>
+  <li><a href="#" class="normaltip"><img src="images/icon3.gif" alt=""></a></li>
+  <li><a href="#" class="normaltip"><img src="images/icon4.gif" alt=""></a></li>
+  <li><a href="#" class="normaltip"><img src="images/icon5.gif" alt=""></a></li>
+  </ul>
+  </section>
   </div>
-</div>
-<script>Cufon.now();</script>
+  <!-- {%FOOTER_LINK} -->
+  </footer>
+  <!-- / footer -->
+  </div>
+  </div>
+  </div>
+  <script>Cufon.now();</script>
 
-<script>
+  <script>
 
-$(document).ready(function(){
+  $(document).ready(function(){
 
     loadGallery(true, 'a.controls');
 
     //This function disables buttons when needed
     function disableButtons(counter_max, counter_current){
-        $('#show-previous-image, #show-next-image').show();
-        if(counter_max == counter_current){
-            $('#show-next-image').hide();
+      $('#show-previous-image, #show-next-image').show();
+      if(counter_max == counter_current){
+        $('#show-next-image').hide();
         } else if (counter_current == 1){
-            $('#show-previous-image').hide();
+          $('#show-previous-image').hide();
         }
-    }
+      }
 
     /**
      *
@@ -235,45 +328,45 @@ $(document).ready(function(){
      * @param setClickAttr  Sets the attribute for the click handler.
      */
 
-    function loadGallery(setIDs, setClickAttr){
-        var current_image,
-            selector,
-            counter = 0;
+     function loadGallery(setIDs, setClickAttr){
+      var current_image,
+      selector,
+      counter = 0;
 
-        $('#show-next-image, #show-previous-image').click(function(){
-            if($(this).attr('id') == 'show-previous-image'){
-                current_image--;
-            } else {
-                current_image++;
-            }
+      $('#show-next-image, #show-previous-image').click(function(){
+        if($(this).attr('id') == 'show-previous-image'){
+          current_image--;
+          } else {
+            current_image++;
+          }
 
-            selector = $('[data-image-id="' + current_image + '"]');
-            updateGallery(selector);
-        });
+          selector = $('[data-image-id="' + current_image + '"]');
+          updateGallery(selector);
+          });
 
-        function updateGallery(selector) {
-            var $sel = selector;
-			console.log($sel);
-			
-            current_image = $sel.data('image-id');
-			$('#image-gallery-description').text($sel.data('description'));
-			console.log($sel.data('description'));
-            $('#image-gallery-title').text($sel.data('title'));
-            $('#image-gallery-image').attr('src', $sel.data('image'));
-            disableButtons(counter, $sel.data('image-id'));
-        }
+      function updateGallery(selector) {
+        var $sel = selector;
+        console.log($sel);
+        
+        current_image = $sel.data('image-id');
+        $('#image-gallery-description').text($sel.data('description'));
+        console.log($sel.data('description'));
+        $('#image-gallery-title').text($sel.data('title'));
+        $('#image-gallery-image').attr('src', $sel.data('image'));
+        disableButtons(counter, $sel.data('image-id'));
+      }
 
-        if(setIDs == true){
-            $('[data-image-id]').each(function(){
-                counter++;
-                $(this).attr('data-image-id',counter);
-            });
-        }
-        $(setClickAttr).on('click',function(){
-            updateGallery($(this));
+      if(setIDs == true){
+        $('[data-image-id]').each(function(){
+          counter++;
+          $(this).attr('data-image-id',counter);
+          });
+      }
+      $(setClickAttr).on('click',function(){
+        updateGallery($(this));
         });
     }
-});
+    });
 </script>
 
 </body>
