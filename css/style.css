@@ -182,7 +182,7 @@ header {
 .slider {
 	top:0px;
 	right:5px;
-	left:8px;
+	left:0px;
 	position:absolute;
 	z-index:1;
 	width:950px
@@ -312,7 +312,7 @@ header {
 	padding:30px;
 	padding-top:0;
 	overflow:hidden
-	
+
 }
 .box h2 {
 	color:#a80002;

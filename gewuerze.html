@@ -349,7 +349,7 @@
         console.log($sel);
         
         current_image = $sel.data('image-id');
-        $('#image-gallery-description').text($sel.data('description'));
+        $('#image-gallery-description').html($sel.data('description'));
         console.log($sel.data('description'));
         $('#image-gallery-title').text($sel.data('title'));
         $('#image-gallery-image').attr('src', $sel.data('image'));

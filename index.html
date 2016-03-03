@@ -1,11 +1,27 @@
-<!DOCTYPE html>
+<DOCTYPE html>
 <html lang="en">
 <head>
 <style> .ban {
 
-			background: url(images/logo.png);
-			height: 152px;
-			width: 960px; }
+      background: url(images/logo.png);
+      height: 152px;
+      width: 960px; }
+
+      .fadein { top:0px;
+  right:5px;
+  left:0px;
+  position:absolute;
+  z-index:1;
+  width:950px;
+  background::url(../images/bg_slider.jpg) 0 0 no-repeat; }
+      .fadein img { position:relative; left:0; top:0; }
+
+@media screen and (min-width: 768px) {
+  
+  #myModal .modal-dialog  {width:500px;}
+
+}
+
 </style>
 <title>Curry House</title>
 <meta charset="utf-8">
@@ -21,11 +37,30 @@
 <script src="js/tms-0.3.js"></script>
 <script src="js/tms_presets.js"></script>
 <script src="js/script.js"></script>
-<script src="js/atooltip.jquery.js"></script>
+<!--<script src="js/atooltip.jquery.js"></script>-->
 <!--[if lt IE 9]>
 <script src="js/html5.js"></script>
 <style type="text/css">.slider_bg {behavior:url("js/PIE.htc")}</style>
 <![endif]-->
+
+<link rel="stylesheet" href="css/bootstrap.css"> <!-- Latest compiled and minified CSS -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script> <!-- jQuery library -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> <!-- Latest compiled JavaScript -->
+<script src="js/jquery-1.3.2.min.js" language="javascript" type="text/javascript"></script>
+<script src="js/jquery-blink.js" language="javscript" type="text/javascript"></script>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script src="js/jquery-blink.js" language="javscript" type="text/javascript"></script>
+<script src="js/timepicki.js"></script>   
+<script>
+$(function(){
+  $('.fadein img:gt(0)').hide();
+  setInterval(function(){$('.fadein :first-child').fadeOut().next('img').fadeIn().end().appendTo('.fadein');}, 3000);
+});
+</script>
+
 </head>
 <body id="page1">
 <div class="body6">
@@ -34,78 +69,152 @@
       <div class="main">
         <!-- header -->
         <header>
-				  <div class="ban">
-           <div></div>
+          <div class="ban">
           
+            <div class="row"  style="float: right" id="top_nav">
+              <a class="text"  data-toggle="modal" href="#myModal" style="color:yellow; font-style: italic; font-size: 20px;"><span class="blink">Online Reservieren !!!</span></a>
+              <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">   
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">×</button>
+                      <h3 class="modal-title" style="color:blue;">Reservierung machen</h3>
+                    </div>
+                    <div class="modal-body">
+                      <form class="form-horizontal" role="form">
+                        <div class="form-group">
+                          <label class="control-label col-sm-3" for="anrede">Anrede:</label>
+                          <div class="col-sm-9">
+                            <div class="dropdown">
+                              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                - bitte wählen -
+                                <span class="caret"></span>
+                              </button>
+                              <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                <li><a href="#">Herr</a></li>
+                                <li><a href="#">Frau</a></li>
+                              </ul>
+                            </div>
 
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="control-label col-sm-3" for="nachname">Nachname:*</label>
+                          <div class="col-sm-9">
+                            <input type="text" class="form-control" id="nachname" placeholder="Nachename">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="control-label col-sm-3" for="vorname">Vorname:*</label>
+                          <div class="col-sm-9">
+                            <input type="text" class="form-control" id="vorname" placeholder="Vorname">
+                          </div>  
+                        </div>
+                        <div class="form-group">
+                          <label class="control-label col-sm-3" for="email">Email:*</label>
+                          <div class="col-sm-9">
+                            <input type="text" class="form-control" id="email" placeholder="Email">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="control-label col-sm-3" for="telefonnummer">Telefonnummer:*</label>
+                          <div class="col-sm-9">          
+                            <input type="text" class="form-control" id="telefonnummer" placeholder="">
+                          </div>
+                        </div>
+
+                        <div class="form-group">
+                          <label class="control-label col-sm-3" for="datum">Datum:*</label>
+                          <div class="col-sm-9">          
+                           
+                              <input type="text" class="form-control" id="datepicker" readonly="readonly" style="width: 110px;">
+                
+                              
+                            
+                          </div>
+                        </div>
+                        
+                        <div class="form-group">
+                          <label class="control-label col-sm-3" for="uhrzeit von">Uhrzeit von:*</label>
+                          <div class="col-sm-9">          
+                            <input type="text" class="form-control" id="uhrzeit von" placeholder="">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="control-label col-sm-3" for="uhrzeit bis">Uhrzeit bis:*</label>
+                          <div class="col-sm-9">          
+                            <input type="text" class="form-control" id="uhrzeit bis" placeholder="">
+                          </div>
+                        </div>
+                        <div class="form-group">        
+                          <div class="col-sm-offset-2 col-sm-10" >
+                            <button type="submit" class="btn btn-default" style="float: right;">Absenden</button>
+                            <button type="submit" class="btn btn-default" style="float: right;">Abrechen</button>
+                          </div>
+                        </div>
+
+                      </form>  
+                    </div><!-- /.modal-body -->
+                  </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+              </div><!-- /.modal -->
+            </div><!-- row -->
 
             </div>
-			     <nav>
-		        <ul id="menu">
-			       <li class="active"><a href="index.html">Home</a></li>
+           <nav>
+            <ul id="menu">
+             <li class="active"><a href="index.html">Home</a></li>
              <li><a href="ayurveda.html">Ayurveda</a></li>
              <li><a href="galarie.html">Galarie</a></li>
              <li><a href="gewuerze.html">Gewürze</a></li>
              <li><a href="mittagstisch.html">Mittagstisch</a></li>
-			       <li><a href="speisekarte.html">Speisekarte</a></li>
-			       <li><a href="kontakt.html">Kontakt</a></li>
-			      </ul>
+             <li><a href="speisekarte.html">Speisekarte</a></li>
+             <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
           </nav>
         </header>
         <!-- / header -->
         <!-- content -->
+<div class="slider_bg">
+<div class="fadein">
+<img src="images/slider/1-Collage-Raum-Mitte-big.jpg "alt="Collage Raum Mitte">
+<img src="images/slider/2-Collage-Raum-Mitte-big.jpg" alt="Collage Raum Mitte Big">
+<img src="images/slider/3-Collage-3räume-big.jpg" alt="collage-3räume-big">
+<img src="images/slider/4-Collage-Raum-3teilig-big.jpg" alt="Collage-Raum-3teilig">
+<img src="images/slider/5-collage-raum-gardine-big.jpg" alt="collage-raum-gardine-big">
+<img src="images/slider/6-a-collage-raum-3teilig-big.jpg" alt="collage-raum-3teilig-big">
+<img src="images/slider/collage-gewürze-1-big.jpg" alt="collage-gewürze">
+<img src="images/slider/collage-gewürze-2-big.jpg" alt="collage-gewürze-2">
+<img src="images/slider/collage-gewürze-3-big.jpg" alt="collage-gewürze-3">
+</div>
+</div>
+
         <article id="content">
-          <div class="slider_bg">
-            <div class="slider">
-              <ul class="items">
-                <li> <img src="images/slider/1-Collage-Raum-Mitte-big.jpg "alt="Collage Raum Mitte">
-                  </li>
-				<li> <img src="images/slider/2-Collage-Raum-Mitte-big.jpg" alt="Collage Raum Mitte Big">
-                  </li>
-				<li> <img src="images/slider/3-Collage-3räume-big.jpg" alt="ollage-3räume-big">
-                  </li>
-				  <li> <img src="images/slider/4-Collage-Raum-3teilig-big.jpg" alt="Collage-Raum-3teilig">
-                  </li>
-				  <li> <img src="images/slider/5-collage-raum-gardine-big.jpg" alt="collage-raum-gardine-big">
-                  </li>
-				  <li> <img src="images/slider/6-a-collage-raum-3teilig-big.jpg" alt="collage-raum-3teilig-big">
-                  </li>
-				  <li> <img src="images/slider/collage-gewürze-1-big.jpg" alt="collage-gewürze">
-                  </li>
-				  <li> <img src="images/slider/collage-gewürze-2-big.jpg" alt="collage-gewürze-2">
-                  </li>
-				   <li> <img src="images/slider/collage-gewürze-3-big.jpg" alt="collage-gewürze-3">
-                  </li>
-				  
-                		
-              </ul>
-            </div>
-          </div>
           <div class="wrap">
             <section class="cols">
               <div class="box">
                 <div>
-				<h2>Wilkommen<span>!!!</span></h2>
+        <h2>Wilkommen <span>!!!</span></h2>
                   <figure><img src="images/page1_img1.jpg" alt="" ></figure>
                   <p class="pad_bot1">Namaste und Herzlich Willkommen im Indian Curryhouse. Lassen Sie sich in die Welt der leuchtenden Farben, bezaubernden Landschaften, pulsierenden Städte und duftenden Gewürze Indiens entführen. Tauchen Sie ein in eine andere Welt und lassen </p>
                   <a href="#" class="button1">Read More</a> </div>
               </div>
             </section>
             <section class="cols pad_lft1">
-              <div class="box">
+              <div class="box" style ="width:300px; height:450px;">
                 <div>
-                  <h2>About <span>Us!!!</span></h2>
+                  <h2>About <span>Us !!!</span></h2>
                   <figure><img src="images/page1_img2.jpg" alt="" ></figure>
-                  <p class="pad_bot1">Bitte beachten Sie, dass nur Barzahlung möglich ist (keine EC-,VISA-,Master oder andere Kartenzahlung),der nächste Geldautomat ist nicht weit von uns in der Lehenerstraße oder in der Eschholzstraße.</p>
+                  <p class="pad_bot1">Bitte beachten Sie, dass nur Barzahlung möglich ist (keine EC-,VISA-,Master oder andere Kartenzahlung),der nächste Geldautomat ist nicht weit von uns in der Lehenerstraße oder in der Eschholzstraße.</p><br>
                   <a href="#" class="button1">Read More</a> </div>
               </div>
             </section>
-            <section class="cols pad_lft1">
-              <div class="box">
+            <section class="cols" style="padding-left:60px;">
+              <div class="box" style ="width:300px; height:450px;">
                 <div>
-                  <h2>Speise <span>Karte!!!</span></h2>
+                  <h2>Speise <span>Karte !!!</span></h2>
                   <figure><img src="images/page1_img3.jpg" alt="" ></figure>
-                    <P class="pad_bot1">Es ist für uns selbstverständlich, dass alle Gerichte frisch zubereitet, alle Chutneys, Saucen und Getränke,so weit es möglich ist, selbst hergestellt und keinerlei Konservierungsstoffe oder Geschmacksverstärker verwendet werden.</p>
+                    <P class="pad_bot1">Es ist für uns selbstverständlich, dass alle Gerichte frisch zubereitet, alle Chutneys, Saucen und Getränke,so weit es möglich ist, selbst hergestellt und keinerlei Konservierungsstoffe oder Geschmacksverstärker verwendet werden.</p><br>
                   <a href="#" class="button1">Read More</a> </div>
               </div>
             </section>
@@ -145,45 +254,46 @@
                 <p> <a href="#">Donnerstag</a> <br>
                   Vegetarisch - Kartoffel Non-Vegetarisch - Fisch Curry </p>
               </div>
-			  </div>
-			  <div class="cols pad_left1">
+        </div>
+        <div class="cols pad_left1">
               <div class="wrapper pad_left1">
                 <figure class="left marg_right1"><img src="images/page1_img6.jpg" alt=""></figure>
                 <p> <a href="#">Freitag</a><br>
                   Vegetarisch - Blumenkohl Non-Vegetarisch - Garnelen Curry </p>
               </div>
-			  <div class="wrapper pad_left1">
+        <div class="wrapper pad_left1">
                 <figure class="left marg_right1"><img src="images/page1_img6.jpg" alt=""></figure>
                 <p> <a href="#">Samstag</a><br>
                   Vegetarisch - Blumenkohl Non-Vegetarisch - Garnelen Curry </p>
-			</div>
-			<div class="wrapper pad_left1">
+      </div>
+      <div class="wrapper pad_left1">
                 <figure class="left marg_right1"><img src="images/page1_img6.jpg" alt=""></figure>
                 <p> <a href="#">Sonntag</a><br>
                   Vegetarisch - Blumenkohl Non-Vegetarisch - Garnelen Curry </p>
-			</div>
+      </div>
             </div>
           </div>
         </section>
          </div>
           <script>Cufon.now();</script>
-      <script type="text/javascript" language="javascript">
+      <script>/*  jQuery ready function. Specify a function to execute when the DOM is fully loaded.  */
+$(document).ready(
+  
+  /* This is the function that will get executed after the DOM is fully loaded */
+  function () {
+    $( "#datepicker" ).datepicker({
+      minDate: 'today'
+    });
+  }
 
-      $(document).ready(function()
-      {
-        $('.blink').blink(); // default is 500ms blink interval.
-        //$('.blink').blink({delay:100}); // causes a 100ms blink interval.
-      });
-
-      </script>
-      <script type="text/javascript">  
- $(".datum").datepicker( mindate: moment());
-
-$(".date-picker").on("change", function () {
-    var id = $(this).attr("id");
-    var val = $("label[for='" + id + "']").text();
-    $("#msg").text(val + " changed");
-});
- </script>
-		 </body>
+);
+</script>
+<script type="text/javascript" language="javascript">
+$(document).ready(function()
+{
+ $('.blink').blink(); // default is 500ms blink interval.
+   //$('.blink').blink({delay:100}); // causes a 100ms blink interval.
+  });
+</script>
+</body>
 </html>
